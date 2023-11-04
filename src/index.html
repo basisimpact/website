@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BASIS Impact - Home</title>
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <nav style="z-index: 9999;">
+        <a href="index.html"><img src="" alt="BASIS Impact Logo" style="width:100px;height:100px;border-radius:50%;"></a>
+        <ul>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About Impact</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+      <div class="content">
+        <h1rp>BASIS Cedar Park</h1rp>
+        <h1><span id="test">Impact Club</span></h1><br><br><br>
+
+        <script>   
+        var arr = ["About Impact", "Events", "Calendar"];
+        var sites = ["about.html", "events.html", "calendar.html"];
+        function random(mn, mx) {
+            return Math.random() * (mx - mn) + mn;
+        }
+        function RandomPage() {
+          var num=(Math.floor(random(1, 4)))-1
+          var down = document.getElementById('_content').innerText = arr[num];
+          var down = document.getElementById('_content').href = sites[num];
+        }
+        </script>
+
+        <br><a id="_content" href="about.html" class="btn">About Impact</a>
+        <a id="reroll" href="#" style="color:#000000" onclick="RandomPage()"><strong>⟲</strong></a>
+      </div>
+    </div>
+    <footer>
+      <p>Contact Us : <a href="mailto:impact.basiscp@gmail.com">impact.basiscp@gmail.com</a></p>
+      <br><br>
+    </footer>
+  </body>
+</html>
